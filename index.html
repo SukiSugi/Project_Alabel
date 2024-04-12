@@ -1,0 +1,269 @@
+<!-- Not A VIRUS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+}
+
+:root {
+  --color-black:rgb(30,36,53);
+  --color-blue: rgb(82,201,220);
+  --color-black-shadow: rgb(26,27,40);
+  --color-purple:rgb(161,96,251);
+}
+
+body {
+  background-color: var(--color-black);
+}
+
+.result {
+  padding: .5rem;
+  background-color: var(--color-black-shadow);
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  
+}
+
+.calculator {
+  display: inline-block;
+  /* padding: 1.25rem; */
+  /* padding-top: 2rem; */
+  /* border-radius: 1.75rem; */
+  width: 15rem;
+  background-color: grey;
+
+}
+
+button {
+  padding: .25rem;
+  border-radius: .25rem;
+  background-color: var(--color-black);
+  color: white;
+  border: none;
+}
+
+#number_ac, #number_backspace, #number_division, #number_multiply, #number_minus, #number_add, #number_equals {
+  background-color: var(--color-purple);
+}
+
+
+
+
+input {
+  background-color: var(--color-black-shadow);
+  text-align: end;
+  width: 100%;
+  height: 10rem;
+  border: none;
+}
+
+.input-answer {
+  font-size: 2rem;
+}
+
+
+
+
+/* .container-input {
+  display: inline-block;
+} */
+
+
+.input {
+  padding: .4rem;
+  background-color: var(--color-black-shadow);
+  /* margin-top: 1.25rem; */
+  display: grid;
+  column-gap: .4rem;
+  row-gap: .4rem;
+  grid-template-columns: 3.56rem 3.56rem 3.56rem auto;
+  
+}
+
+.equals {
+  grid-column-start: 4;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+
+  </style>
+
+  <!-- HTML!!!! -->
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="calculator">
+
+      <div class="result">
+        <input
+         id="input-screen"
+         type="text"
+         class="input-answer"
+         maxlength="15"
+         value=""
+         >
+      </div>
+
+      <div class="input">
+
+
+        <button id="number_ac" value="AC" onclick="func_ac()">AC</button>
+        <button id="number_backspace">&#9003;</button>
+        <button id="number_division" value="/" onclick="func_division()">&div;</button>
+        <button id="number_multiply" value="x" onclick="func_multiply()">x</button>
+
+
+        <button id="number_seven" value="7" onclick="func_seven()">7</button>
+        <button id="number_eight" value="8" onclick="func_eight()">8</button>
+        <button id="number_nine" value="9" onclick="func_nine()">9</button>
+        <button id="number_minus" value="-" onclick="func_minus()">&minus;</button>
+
+
+        <button id="number_four" value="4" onclick="func_four()">4</button>
+        <button id="number_five" value="5" onclick="func_five()">5</button>
+        <button id="number_six" value="6" onclick="func_six()">6</button>
+        <button id="number_add" value="+" onclick="func_add()">+</button>
+        
+
+        <button id="number_one" value="1" onclick="func_one()">1</button>
+        <button id="number_two" value="2" onclick="func_two()">2</button>
+        <button id="number_three" value="3" onclick="func_three()">3</button>
+        <button id="number_equals" value="=" onclick="func_equals()"  class="equals">&equals;</button>
+
+
+        <button id="number_percent" value="%" onclick="func_percent()">&percnt;</button>
+        <button id="number_zero" value="0" onclick="func_zero()">0</button>
+        
+        <button id="number_dot" value="." onclick="func_dot()">.</button>
+
+
+      </div>
+
+
+      <!-- THE SCRIPT!!!!-->
+
+     
+      <script>
+
+function func_one() {
+  let one = document.getElementById("number_one").value;
+  document.getElementById("input-screen").value = one;
+}
+
+function func_two() {
+  let two = document.getElementById("number_two").value;
+  document.getElementById("input-screen").value = two;
+}
+
+function func_three() {
+  let three = document.getElementById("number_three").value;
+  document.getElementById("input-screen").value = three;
+}
+
+function func_four() {
+  let four = document.getElementById("number_four").value;
+  document.getElementById("input-screen").value = four;
+}
+
+function func_five() {
+  let five = document.getElementById("number_five").value;
+  document.getElementById("input-screen").value = five;
+}
+
+function func_six() {
+  let six = document.getElementById("number_six").value;
+  document.getElementById("input-screen").value = six;
+}
+
+function func_seven() {
+  let seven = document.getElementById("number_seven").value;
+  document.getElementById("input-screen").value = seven;
+}
+
+function func_eight() {
+  let eight = document.getElementById("number_eight").value;
+  document.getElementById("input-screen").value = eight;
+}
+
+function func_nine() {
+  let nine = document.getElementById("number_nine").value;
+  document.getElementById("input-screen").value = nine;
+}
+
+function func_zero() {
+  let zero = document.getElementById("number_one").value;
+  document.getElementById("input-screen").value = zero;
+}
+
+function func_multiply() {
+  let multiply = document.getElementById("number_multiply").value;
+  document.getElementById("input-screen").value = multiply;
+}
+
+function func_division() {
+  let division = document.getElementById("number_division").value;
+  document.getElementById("input-screen").value = division;
+}
+
+function func_equals() {
+  let equals = document.getElementById("number_equals").value;
+  document.getElementById("input-screen").value = equals;
+}
+
+function func_dot() {
+  let dot = document.getElementById("number_dot").value;
+  document.getElementById("input-screen").value = dot;
+}
+
+function func_minus() {
+  let minus = document.getElementById("number_minus").value;
+  document.getElementById("input-screen").value = minus;
+}
+
+function func_percent() {
+  let percent = document.getElementById("number_percent").value;
+  document.getElementById("input-screen").value = percent;
+}
+
+function func_add() {
+  let add = document.getElementById("number_add").value;
+  document.getElementById("input-screen").value = add;
+}
+
+function func_one() {
+  let one = document.getElementById("number_one").value;
+  document.getElementById("input-screen").value = one;
+}
+
+function func_one() {
+  let one = document.getElementById("number_one").value;
+  document.getElementById("input-screen").value = one;
+}
+
+      </script>
+
+    </div>
+  </div>
+  
+</body>
+</html>
