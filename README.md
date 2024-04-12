@@ -1,2 +1,2 @@
-# Project_Alabel
+# Project_Alabel_Calculator
 ICT Study Projects
