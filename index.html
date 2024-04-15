@@ -6,10 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
-  
   <link rel="stylesheet" href="index.css">
 
- 
 </head>
 <body>
 
@@ -18,51 +16,68 @@
     <div class="calculator">
 
       <div class="result">
+
+        <!-- <p id="input-screen-top"></p> -->
+        
+        <input placeholder="" id="input-screen-top">
+
+        
+        
         <input
+        placeholder="0"
+        autocomplete="off"
          id="input-screen"
          type="text"
          class="input-answer"
-         maxlength="15"
+         maxlength="12"
          value=""
          >
+
+         <p class="equals-sign">=</p>
+
       </div>
 
       <div class="input">
 
 
-        <button id="number_ac" value="AC" onclick="func_ac()">AC</button>
-        <button id="number_backspace">&#9003;</button>
-        <button id="number_division" value="/" onclick="func_division()">&div;</button>
-        <button id="number_multiply" value="x" onclick="func_multiply()">x</button>
+        <button id="number_ac" class="purple">AC</button>
+        <button id="number_backspace" class="purple">&#9003;</button>
+        <button id="number_division" class="purple">&div;</button>
+        <button id="number_multiply" class="purple">x</button>
 
 
-        <button id="number_seven" value="7" onclick="func_seven()">7</button>
-        <button id="number_eight" value="8" onclick="func_eight()">8</button>
-        <button id="number_nine" value="9" onclick="func_nine()">9</button>
-        <button id="number_minus" value="-" onclick="func_minus()">&minus;</button>
+        <button id="number_seven">7</button>
+        <button id="number_eight">8</button>
+        <button id="number_nine">9</button>
+        <button id="number_minus" class="purple">&minus;</button>
 
 
-        <button id="number_four" value="4" onclick="func_four()">4</button>
-        <button id="number_five" value="5" onclick="func_five()">5</button>
-        <button id="number_six" value="6" onclick="func_six()">6</button>
-        <button id="number_add" value="+" onclick="func_add()">+</button>
+        <button id="number_four">4</button>
+        <button id="number_five">5</button>
+        <button id="number_six">6</button>
+        <button id="number_add" class="purple">+</button>
         
 
-        <button id="number_one" value="1" onclick="func_one()">1</button>
-        <button id="number_two" value="2" onclick="func_two()">2</button>
-        <button id="number_three" value="3" onclick="func_three()">3</button>
-        <button id="number_equals" value="=" onclick="func_equals()"  class="equals">&equals;</button>
+        <button id="number_one">1</button>
+        <button id="number_two">2</button>
+        <button id="number_three">3</button>
+        <button id="number_equals"   class="purple">&equals;</button>
 
 
-        <button id="number_percent" value="%" onclick="func_percent()">&percnt;</button>
-        <button id="number_zero" value="0" onclick="func_zero()">0</button>
+        <!-- <button id="number_percent"  class="purple">&percnt;</button> -->
+        <button id="number_percent"  class="purple">+/-</button>
+        <button id="number_zero">0</button>
         
-        <button id="number_dot" value="." onclick="func_dot()">.</button>
+        <button id="number_dot">.</button>
 
 
       </div>
 
+
+
+     
       <script src="index.js"></script>
+
     </div>
   </div>
   
