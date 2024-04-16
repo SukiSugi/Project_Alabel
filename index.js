@@ -166,7 +166,10 @@ function functionNine(){
 
 function functionDot(){
   let input = numberDot.value;
-  inputScreen.value += input;
+  if(inputScreen.value != "."){
+    inputScreen.value += input;
+  }
+
 }
 
 function functionAC(){
