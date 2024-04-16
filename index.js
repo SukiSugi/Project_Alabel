@@ -172,36 +172,62 @@ function functionDot(){
 function functionAC(){
   inputScreen.value = "";
   inputScreenTop.value = " ";
+  inputScreen.placeholder = "0";
 }
 
 function functionAdd(){
   let input = numberAdd.value;
-  inputScreenTop.value = inputScreen.value;
-  inputScreenTop.value += input;
+  if(inputScreen.value != "") {
+    inputScreenTop.value = inputScreen.value;
+    inputScreen.value = "";
+    inputScreen.placeholder = inputScreenTop.value;
+    inputScreenTop.value += input;
+  }
+  // if(inputScreenTop.value != ""){
+  //   inputScreenTop.value += inputScreen.value;
+  //   console.log("Hi");
+  // }
+
+  
 }
 
 function functionMinus(){
   let input = numberMinus.value;
-  inputScreenTop.value = inputScreen.value;
-  inputScreenTop.value += input;
+  if(inputScreen.value != ""){
+    inputScreenTop.value = inputScreen.value;
+    inputScreen.value = "";
+    inputScreen.placeholder = inputScreenTop.value;
+    inputScreenTop.value += input;
+  }
 }
 
 function functionMultiply(){
   let input = numberMultiply.value;
-  inputScreenTop.value = inputScreen.value;
-  inputScreenTop.value += input;
+  if(inputScreen.value != "") {
+    inputScreenTop.value = inputScreen.value;
+    inputScreen.value = "";
+    inputScreen.placeholder = inputScreenTop.value;
+    inputScreenTop.value += input;
+  }
 }
 
 function functionDivision(){
   let input = numberDivision.value;
-  inputScreenTop.value = inputScreen.value;
-  inputScreenTop.value += input;
+  if(inputScreen.value != "") {
+    inputScreenTop.value = inputScreen.value;
+    inputScreen.value = "";
+    inputScreen.placeholder = inputScreenTop.value;
+    inputScreenTop.value += input;
+  }
 }
 
 function onclickEqual() {
   console.log("Equal Clicked!");
-  inputScreenTop.value += inputScreen.value;
-  inputScreen.value = eval(inputScreenTop.value);
+  if(inputScreen.value != "") {
+    inputScreenTop.value += inputScreen.value;
+    inputScreen.placeholder = eval(inputScreenTop.value);
+    inputScreen.value = ""
+  }
 }
 
 // function functionPercent() {
@@ -227,6 +253,7 @@ function onclickEqual() {
 
 function functionBackspace(){
   inputScreen.value = "";
+  inputScreen.placeholder = "0";
 }
 
 
