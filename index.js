@@ -111,53 +111,55 @@ function functionZero() {
 function functionOne(){
   let input = numberOne.value;
   inputScreen.value += input;
-
-  // if(inputScreen.value != result) {
-  //   inputScreen.value = "";
-  // }
-
-  
 }
 
 
 function functionTwo(){
   let input = numberTwo.value;
   inputScreen.value += input;
+
 }
 
 function functionThree(){
   let input = numberThree.value;
   inputScreen.value += input;
+
 }
 
 function functionFour(){
   let input = numberFour.value;
   inputScreen.value += input;
+
 }
 
 function functionFive(){
   let input = numberFive.value;
   inputScreen.value += input;
+
 }
 
 function functionSix(){
   let input = numberSix.value;
   inputScreen.value += input;
+
 }
 
 function functionSeven(){
   let input = numberSeven.value;
   inputScreen.value += input;
+
 }
 
 function functionEight(){
   let input = numberEight.value;
   inputScreen.value += input;
+
 }
 
 function functionNine(){
   let input = numberNine.value;
   inputScreen.value += input;
+
 }
 
 
@@ -186,13 +188,20 @@ function functionAdd(){
     inputScreen.placeholder = inputScreenTop.value;
     inputScreenTop.value += input;
   }
-  // if(inputScreenTop.value != ""){
-  //   inputScreenTop.value += inputScreen.value;
-  //   console.log("Hi");
-  // }
-
-  
+  else {
+    inputScreenTop.value += inputScreen.placeholder;
+    console.log("else");
+    inputScreenTop.value = eval(inputScreenTop.value);
+    inputScreenTop.value += input;
+  }
 }
+
+// function functionAdd(){
+//   let input = numberAdd.value;
+//   inputScreenTop.value += inputScreen.value;
+//   inputScreenTop.value += input;
+// }
+
 
 function functionMinus(){
   let input = numberMinus.value;
@@ -200,6 +209,12 @@ function functionMinus(){
     inputScreenTop.value = inputScreen.value;
     inputScreen.value = "";
     inputScreen.placeholder = inputScreenTop.value;
+    inputScreenTop.value += input;
+  }
+  else {
+    inputScreenTop.value += inputScreen.placeholder;
+    console.log("else");
+    inputScreenTop.value = eval(inputScreenTop.value);
     inputScreenTop.value += input;
   }
 }
@@ -212,6 +227,12 @@ function functionMultiply(){
     inputScreen.placeholder = inputScreenTop.value;
     inputScreenTop.value += input;
   }
+  else {
+    inputScreenTop.value += inputScreen.placeholder;
+    console.log("else");
+    inputScreenTop.value = eval(inputScreenTop.value);
+    inputScreenTop.value += input;
+  }
 }
 
 function functionDivision(){
@@ -222,20 +243,55 @@ function functionDivision(){
     inputScreen.placeholder = inputScreenTop.value;
     inputScreenTop.value += input;
   }
+  else {
+    inputScreenTop.value += inputScreen.placeholder;
+    console.log("else");
+    inputScreenTop.value = eval(inputScreenTop.value);
+    inputScreenTop.value += input;
+  }
 }
 
 function onclickEqual() {
   console.log("Equal Clicked!");
-  if(inputScreen.value != "") {
-    inputScreenTop.value += inputScreen.value;
+  // if(inputScreen.value != "") {
+  //   inputScreenTop.value += inputScreen.value;
+  //   inputScreen.placeholder = eval(inputScreenTop.value);
+  //   inputScreen.value = ""
+  // }
+  inputScreenTop.value += inputScreen.value;
     inputScreen.placeholder = eval(inputScreenTop.value);
     inputScreen.value = ""
-  }
 }
 
-// function functionPercent() {
-//   inputScreen.value - inputScreen.value*2;
+
+
+function functionPercent() {
+  if (inputScreen.value > 1 ) {
+    inputScreen.value = eval(inputScreen.value - inputScreen.value - inputScreen.value);
+    inputScreen.placeholder = inputScreen.value;
+    console.log("1");
+} else {
+  inputScreen.value = Math.sqrt( eval((inputScreen.value)**2)); 
+  console.log("2");
+}}
+
+//   if (inputScreen.placeholder > 0) {
+//     inputScreen.value = inputScreen.placeholder;
+//     inputScreen.value = eval(inputScreen.value - inputScreen.value - inputScreen.value);
+//     console.log("2");
 // }
+//   if (inputScreen.value < -1) {
+//     inputScreen.value = Math.sqrt( eval((-55)**2))  
+//     console.log("3");
+// }
+//   if (inputScreen.placeholder < 0) {
+//     inputScreen.value = inputScreen.placeholder;
+//     inputScreen.value = Math.sqrt( eval((-55)**2))  
+//     console.log("3");
+// }
+
+// console.log( Math.sqrt( eval((-55)**2))  )
+
 
 // function functionEquals(){
 //   let result = eval(inputScreen.value);
@@ -268,8 +324,3 @@ function functionBackspace(){
 
 
 
-
-
-
- 
- 
