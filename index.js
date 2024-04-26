@@ -1,326 +1,262 @@
-let numberZero = document.getElementById("number_zero");
-let numberOne = document.getElementById("number_one");
-let numberTwo = document.getElementById("number_two");
-let numberThree = document.getElementById("number_three");
-let numberFour = document.getElementById("number_four");
-let numberFive = document.getElementById("number_five");
-let numberSix = document.getElementById("number_six");
-let numberSeven = document.getElementById("number_seven");
-let numberEight = document.getElementById("number_eight");
-let numberNine = document.getElementById("number_nine");
+const zero = document.getElementById("number_zero");
+const one = document.getElementById("number_one");
+const two = document.getElementById("number_two");
+const three = document.getElementById("number_three");
+const four = document.getElementById("number_four");
+const five = document.getElementById("number_five");
+const six = document.getElementById("number_six");
+const seven = document.getElementById("number_seven");
+const eight = document.getElementById("number_eight");
+const nine = document.getElementById("number_nine");
 
-let numberDot = document.getElementById("number_dot");
-let numberAC = document.getElementById("number_ac");
-let numberAdd = document.getElementById("number_add");
-let numberMinus = document.getElementById("number_minus");
-let numberMultiply = document.getElementById("number_multiply");
-let numberDivision = document.getElementById("number_division");
-let numberEquals = document.getElementById("number_equals");
+const add = document.getElementById("number_add");
+const sub = document.getElementById("number_minus");
+const mult = document.getElementById("number_multiply");
+const div = document.getElementById("number_division");
+const sign = document.getElementById("number_sign");
+const equal = document.getElementById("number_equals");
 
-let numberBackspace = document.getElementById("number_backspace");
+const ac = document.getElementById("number_ac");
+const bs = document.getElementById("number_backspace");
+const dot = document.getElementById("number_dot");
 
-let inputScreen = document.getElementById("input-screen");
-let inputScreenTop = document.getElementById("input-screen-top");
-let inputPercent = document.getElementById("number_percent");
-
-
+const inputScreen = document.getElementById("input-screen");
+const inputScreenTop = document.getElementById("input-screen-top");
 
 
+zero.onclick = function(){zeroFunction()};
+one.onclick = function(){oneFunction()};
+two.onclick = function(){twoFunction()};
+three.onclick = function(){threeFunction()};
+four.onclick = function(){fourFunction()};
+five.onclick = function(){fiveFunction()};
+six.onclick = function(){sixFunction()};
+seven.onclick = function(){sevenFunction()};
+eight.onclick = function(){eightFunction()};
+nine.onclick = function(){nineFunction()};
 
-numberZero.value = 0;
-numberOne.value = 1;
-numberTwo.value = 2;
-numberThree.value = 3;
-numberFour.value = 4;
-numberFive.value = 5;
-numberSix.value = 6;
-numberSeven.value = 7;
-numberEight.value = 8;
-numberNine.value = 9;
+add.onclick = function(){addFunction()};
+sub.onclick = function(){subFunction()};
+mult.onclick = function(){multFunction()};
+div.onclick = function(){divFunction()};
+sign.onclick = function(){signFunction()};
+equal.onclick = function(){equalFunction()};
 
-numberDot.value = ".";
-numberAC.value = "";
-numberAdd.value = " + ";
-numberMinus.value = " - ";
-numberMultiply.value = " * ";
-numberDivision.value = " / ";
-
-inputScreen.value = ""
-
-// inputScreen.value = "";
-
+ac.onclick = function(){acFunction()};
+bs.onclick = function(){bsFunction()};
+dot.onclick = function(){dotFunction()};
 
 
-
-numberZero.onclick = function(){functionZero()};
-numberOne.onclick = function(){functionOne()};
-numberTwo.onclick = function(){functionTwo()};
-numberThree.onclick = function(){functionThree()};
-numberFour.onclick = function(){functionFour()};
-numberFive.onclick = function(){functionFive()};
-numberSix.onclick = function(){functionSix()};
-numberSeven.onclick = function(){functionSeven()};
-numberEight.onclick = function(){functionEight()};
-numberNine.onclick = function(){functionNine()};
-
-numberDot.onclick = function(){functionDot()};
-numberAC.onclick = function(){functionAC()};
-numberAdd.onclick = function(){functionAdd()};
-numberMinus.onclick = function(){functionMinus()};
-numberMultiply.onclick = function(){functionMultiply()};
-numberDivision.onclick = function(){functionDivision()};
-numberEquals.onclick = function(){functionEquals()};
-
-numberBackspace.onclick = function(){functionBackspace()};
-
-numberEquals.onclick = function(){onclickEqual()};
-
-inputPercent.onclick = function(){functionPercent()};
-
-
-// function functionZero() {
-//   let input = numberZero.value;
-//   // if(inputScreen.value != 0){
-//   //   inputScreen.value += input;
-//   // }
-  
-// }
-
-// function functionOne(){
-//   let input = numberOne.value;
-//   inputScreen.value = input;
-//   inputScreenTop.value += input;
-// }
-
-// function functionTwo(){
-//   let input = numberTwo.value;
-//   inputScreen.value = input;
-//   inputScreenTop.value += input;
-// }
-
-function functionZero() {
-  let input = numberZero.value;
-
-  if(inputScreen.value != 0) {
-    // inputScreen.value = "";
-    inputScreen.value += input;
-  }
-  
+function zeroFunction() {
+  console.log("zero(0)");
+  zero.value = 0;
+  inputScreen.value += zero.value;
+  inputScreen.placeholder = "";
 }
-
-function functionOne(){
-  let input = numberOne.value;
-  inputScreen.value += input;
+function oneFunction() {
+  console.log("one(1)");
+  one.value = 1;
+  inputScreen.value += one.value;
+  inputScreen.placeholder = "";
+}
+function twoFunction() {
+  console.log("two(2)");
+  two.value = 2;
+  inputScreen.value += two.value;
+  inputScreen.placeholder = "";
+}
+function threeFunction() {
+  console.log("three(3)");
+  three.value = 3;
+  inputScreen.value += three.value;
+  inputScreen.placeholder = "";
+}
+function fourFunction() {
+  console.log("four(4)");
+  four.value = 4;
+  inputScreen.value += four.value;
+  inputScreen.placeholder = "";
+}
+function fiveFunction() {
+  console.log("five(5)");
+  five.value = 5;
+  inputScreen.value += five.value;
+  inputScreen.placeholder = "";
+}
+function sixFunction() {
+  console.log("six(6)");
+  six.value = 6;
+  inputScreen.value += six.value;
+  inputScreen.placeholder = "";
+}
+function sevenFunction() {
+  console.log("seven(7)");
+  seven.value = 7;
+  inputScreen.value += seven.value;
+  inputScreen.placeholder = "";
+}
+function eightFunction() {
+  console.log("eight(8)");
+  eight.value = 8;
+  inputScreen.value += eight.value;
+  inputScreen.placeholder = "";
+}
+function nineFunction() {
+  console.log("nine(9)");
+  nine.value = 9;
+  inputScreen.value += nine.value;
+  inputScreen.placeholder = "";
 }
 
 
-function functionTwo(){
-  let input = numberTwo.value;
-  inputScreen.value += input;
-
-}
-
-function functionThree(){
-  let input = numberThree.value;
-  inputScreen.value += input;
-
-}
-
-function functionFour(){
-  let input = numberFour.value;
-  inputScreen.value += input;
-
-}
-
-function functionFive(){
-  let input = numberFive.value;
-  inputScreen.value += input;
-
-}
-
-function functionSix(){
-  let input = numberSix.value;
-  inputScreen.value += input;
-
-}
-
-function functionSeven(){
-  let input = numberSeven.value;
-  inputScreen.value += input;
-
-}
-
-function functionEight(){
-  let input = numberEight.value;
-  inputScreen.value += input;
-
-}
-
-function functionNine(){
-  let input = numberNine.value;
-  inputScreen.value += input;
-
-}
-
-
-
-
-
-function functionDot(){
-  let input = numberDot.value;
-  if(inputScreen.value != "."){
-    inputScreen.value += input;
-  }
-
-}
-
-function functionAC(){
-  inputScreen.value = "";
-  inputScreenTop.value = " ";
-  inputScreen.placeholder = "0";
-}
-
-function functionAdd(){
-  let input = numberAdd.value;
-  if(inputScreen.value != "") {
-    inputScreenTop.value = inputScreen.value;
-    inputScreen.value = "";
-    inputScreen.placeholder = inputScreenTop.value;
-    inputScreenTop.value += input;
-  }
-  else {
+function addFunction() {
+  console.log("addition(+)");
+  add.value = " + ";
+  if 
+  (inputScreen.value == 0 || inputScreen.value == "") {
+    console.log("add 1if");
     inputScreenTop.value += inputScreen.placeholder;
-    console.log("else");
+    inputScreenTop.value = 
+    eval(inputScreenTop.value)
+    inputScreenTop.value += add.value;
+  }
+  if 
+  (inputScreen.placeholder != inputScreenTop.value.substring(0, (inputScreenTop.value.length-3))) {
+    console.log("add 2if")
+    inputScreenTop.value += inputScreen.value;
     inputScreenTop.value = eval(inputScreenTop.value);
-    inputScreenTop.value += input;
-  }
-}
-
-// function functionAdd(){
-//   let input = numberAdd.value;
-//   inputScreenTop.value += inputScreen.value;
-//   inputScreenTop.value += input;
-// }
-
-
-function functionMinus(){
-  let input = numberMinus.value;
-  if(inputScreen.value != ""){
-    inputScreenTop.value = inputScreen.value;
-    inputScreen.value = "";
-    inputScreen.placeholder = inputScreenTop.value;
-    inputScreenTop.value += input;
-  }
-  else {
-    inputScreenTop.value += inputScreen.placeholder;
-    console.log("else");
-    inputScreenTop.value = eval(inputScreenTop.value);
-    inputScreenTop.value += input;
-  }
-}
-
-function functionMultiply(){
-  let input = numberMultiply.value;
-  if(inputScreen.value != "") {
-    inputScreenTop.value = inputScreen.value;
-    inputScreen.value = "";
-    inputScreen.placeholder = inputScreenTop.value;
-    inputScreenTop.value += input;
-  }
-  else {
-    inputScreenTop.value += inputScreen.placeholder;
-    console.log("else");
-    inputScreenTop.value = eval(inputScreenTop.value);
-    inputScreenTop.value += input;
-  }
-}
-
-function functionDivision(){
-  let input = numberDivision.value;
-  if(inputScreen.value != "") {
-    inputScreenTop.value = inputScreen.value;
-    inputScreen.value = "";
-    inputScreen.placeholder = inputScreenTop.value;
-    inputScreenTop.value += input;
-  }
-  else {
-    inputScreenTop.value += inputScreen.placeholder;
-    console.log("else");
-    inputScreenTop.value = eval(inputScreenTop.value);
-    inputScreenTop.value += input;
-  }
-}
-
-function onclickEqual() {
-  console.log("Equal Clicked!");
-  // if(inputScreen.value != "") {
-  //   inputScreenTop.value += inputScreen.value;
-  //   inputScreen.placeholder = eval(inputScreenTop.value);
-  //   inputScreen.value = ""
-  // }
-  inputScreenTop.value += inputScreen.value;
-    inputScreen.placeholder = eval(inputScreenTop.value);
-    inputScreen.value = ""
-}
-
-
-
-function functionPercent() {
-  if (inputScreen.value > 1 ) {
-    inputScreen.value = eval(inputScreen.value - inputScreen.value - inputScreen.value);
+    inputScreenTop.value += add.value;
     inputScreen.placeholder = inputScreen.value;
-    console.log("1");
-} else {
-  inputScreen.value = Math.sqrt( eval((inputScreen.value)**2)); 
-  console.log("2");
-}}
+    inputScreen.value = "";
+  }
+  else {
+    console.log("add else")
+    inputScreen.value += add.value;
+    inputScreenTop.value += inputScreen.value;
+    inputScreen.placeholder = inputScreen.value;
+    inputScreen.value = "";
+    console.log((inputScreen.placeholder).length);
+    inputScreen.placeholder = (inputScreen.placeholder).substring(0, (inputScreen.placeholder).length-3);
+  }
+}
 
-//   if (inputScreen.placeholder > 0) {
-//     inputScreen.value = inputScreen.placeholder;
-//     inputScreen.value = eval(inputScreen.value - inputScreen.value - inputScreen.value);
-//     console.log("2");
-// }
-//   if (inputScreen.value < -1) {
-//     inputScreen.value = Math.sqrt( eval((-55)**2))  
-//     console.log("3");
-// }
-//   if (inputScreen.placeholder < 0) {
-//     inputScreen.value = inputScreen.placeholder;
-//     inputScreen.value = Math.sqrt( eval((-55)**2))  
-//     console.log("3");
-// }
+function subFunction() {
+  console.log("subtraction(-)");
+  sub.value = " - ";
+  if 
+  (inputScreen.value == 0 || inputScreen.value == "") {
+    console.log("sub 1if");
+    inputScreenTop.value += inputScreen.placeholder;
+    inputScreenTop.value = 
+    eval(inputScreenTop.value)
+    inputScreenTop.value += sub.value;
+  }
+  if 
+  (inputScreen.placeholder != inputScreenTop.value.substring(0, (inputScreenTop.value.length-3))) {
+    console.log("sub 2if")
+    inputScreenTop.value += inputScreen.value;
+    inputScreenTop.value = eval(inputScreenTop.value);
+    inputScreenTop.value += sub.value;
+    inputScreen.placeholder = inputScreen.value;
+    inputScreen.value = "";
+  }
+  else {
+    console.log("sub else")
+    inputScreen.value += sub.value;
+    inputScreenTop.value += inputScreen.value;
+    inputScreen.placeholder = inputScreen.value;
+    inputScreen.value = "";
+    console.log((inputScreen.placeholder).length);
+    inputScreen.placeholder = (inputScreen.placeholder).substring(0, (inputScreen.placeholder).length-3);
+  }
+}
+function multFunction(){
+  console.log("multiplication(x)");
+  mult.value = " * ";
+   if 
+  (inputScreen.value == 0 || inputScreen.value == "") {
+    console.log("mult 1if");
+    inputScreenTop.value += inputScreen.placeholder;
+    inputScreenTop.value = 
+    eval(inputScreenTop.value)
+    inputScreenTop.value += mult.value;
+  }
+  if 
+  (inputScreen.placeholder != inputScreenTop.value.substring(0, (inputScreenTop.value.length-3))) {
+    console.log("mult 2if")
+    inputScreenTop.value += inputScreen.value;
+    inputScreenTop.value = eval(inputScreenTop.value);
+    inputScreenTop.value += mult.value;
+    inputScreen.placeholder = inputScreen.value;
+    inputScreen.value = "";
+  }
+  else {
+    console.log("mult else")
+    inputScreen.value += mult.value;
+    inputScreenTop.value += inputScreen.value;
+    inputScreen.placeholder = inputScreen.value;
+    inputScreen.value = "";
+    console.log((inputScreen.placeholder).length);
+    inputScreen.placeholder = (inputScreen.placeholder).substring(0, (inputScreen.placeholder).length-3);
+  }
+}
 
-// console.log( Math.sqrt( eval((-55)**2))  )
-
-
-// function functionEquals(){
-//   let result = eval(inputScreen.value);
-//   inputScreen.value = result;
-// }
-
-
-
-// if (inputScreen.value >= 9 && inputScreen.value <= 0) {
-//   numberEquals.onclick.value = "1";
-// }
-
-// if(inputScreen.value > 9 && inputScreen.value <0)
-//   let inputScreen.value = input;
-
-
-
-
-function functionBackspace(){
-  inputScreen.value = "";
-  inputScreen.placeholder = "0";
+function divFunction(){
+  console.log("division(/)")
+  div.value = " / ";
+  if 
+  (inputScreen.value == 0 || inputScreen.value == "") {
+    console.log("div 1if");
+    inputScreenTop.value += inputScreen.placeholder;
+    inputScreenTop.value = 
+    eval(inputScreenTop.value)
+    inputScreenTop.value += div.value;
+  }
+  if 
+  (inputScreen.placeholder != inputScreenTop.value.substring(0, (inputScreenTop.value.length-3))) {
+    console.log("div 2if")
+    inputScreenTop.value += inputScreen.value;
+    inputScreenTop.value = eval(inputScreenTop.value);
+    inputScreenTop.value += div.value;
+    inputScreen.placeholder = inputScreen.value;
+    inputScreen.value = "";
+  }
+  else {
+    console.log("div else")
+    inputScreen.value += div.value;
+    inputScreenTop.value += inputScreen.value;
+    inputScreen.placeholder = inputScreen.value;
+    inputScreen.value = "";
+    console.log((inputScreen.placeholder).length);
+    inputScreen.placeholder = (inputScreen.placeholder).substring(0, (inputScreen.placeholder).length-3);
+  }
 }
 
 
+function equalFunction(){
+  console.log("equal(=)");
+  inputScreenTop.value += inputScreen.placeholder;
+  inputScreenTop.value += inputScreen.value;
+  inputScreen.value = "";
+  inputScreen.placeholder = eval(inputScreenTop.value);
+}
 
 
-
-// B  I  G      B  R  E  A  K
-
-
+function acFunction(){
+  console.log("ac(AC)");
+  inputScreen.value = "";
+  inputScreen.placeholder = 0;
+  inputScreenTop.value = "";
+}
+function bsFunction(){
+  console.log("backspace(BACKSPACE)");
+  inputScreen.placeholder = 0;
+  inputScreen.value = (inputScreen.value.substring(0, (inputScreen.value.length-1)));
+}
+function dotFunction(){
+  console.log("dot(.)");
+  dot.value = ".";
+  inputScreen.value += dot.value;
+}
 
 
