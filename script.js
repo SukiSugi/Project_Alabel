@@ -50,8 +50,9 @@ dot.onclick = function(){dotFunction()};
 function zeroFunction() {
   console.log("zero(0)");
   zero.value = 0;
+  if (inputScreen.value != 0)
   inputScreen.value += zero.value;
-  inputScreen.placeholder = "";
+  // inputScreen.placeholder = "";
 }
 function oneFunction() {
   console.log("one(1)");
@@ -231,6 +232,19 @@ function divFunction(){
     inputScreen.placeholder = (inputScreen.placeholder).substring(0, (inputScreen.placeholder).length-3);
   }
 }
+
+function signFunction(){
+  if (inputScreen.value > 1 ) {
+    inputScreen.value = eval(inputScreen.value - inputScreen.value - inputScreen.value);
+    inputScreen.placeholder = inputScreen.value;
+    console.log("1");
+  } 
+  else {
+    inputScreen.value = Math.sqrt( eval((inputScreen.value)**2)); 
+    console.log("2");
+  }
+}
+
 
 
 function equalFunction(){
